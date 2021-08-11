@@ -6,6 +6,7 @@ const char TITLE[] = "TestProgram";
 const int WIN_WIDTH = 640;
 const int WIN_HEIGHT = 480;
 
+int str[50];
 // プログラムは WinMain から始まります
 int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nCmdShow)
 {
@@ -39,7 +40,7 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 
 	//画像などのリソースデータの変数宣言と読み込み
 	int title = LoadGraph("title.png");
-	int coin = LoadGraph("hatena0.png");
+	LoadDivGraph("string.png", 26, 26, 1, 16, 16, str);
 	//ゲームループで使う変数の宣言
 
 	//最新のキーボード情報用
@@ -67,7 +68,29 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 
 		//描画処理
 		DrawGraph(0, 0, title, true);
-		
+		DrawGraph(80, 32, str[12], true);
+		DrawGraph(96, 32, str[0], true);
+		DrawGraph(112, 32, str[17], true);
+		DrawGraph(128, 32, str[8], true);
+		DrawGraph(144, 32, str[14], true);
+
+		DrawGraph(80, 48, str[2], true);
+
+		DrawGraph(240, 48, str[2], true);
+		DrawGraph(256, 48, str[1], true);
+		DrawGraph(272, 48, str[1], true);
+		DrawGraph(288, 48, str[1], true);
+
+		DrawGraph(384, 32, str[22], true);
+		DrawGraph(400, 32, str[14], true);
+		DrawGraph(416, 32, str[17], true);
+		DrawGraph(432, 32, str[11], true);
+		DrawGraph(448, 32, str[3], true);
+
+		DrawGraph(512, 32, str[19], true);
+		DrawGraph(528, 32, str[8], true);
+		DrawGraph(544, 32, str[12], true);
+		DrawGraph(560, 32, str[4], true);
 
 		//(ダブルバッファ)裏面
 		ScreenFlip();
